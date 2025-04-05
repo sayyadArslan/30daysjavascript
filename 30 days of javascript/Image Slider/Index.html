@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width initial-scale=1.0">
+		<Title>Image Slider</Title>
+		<link rel="stylesheet" type="text/css" href="Style.css"
+	</head>
+	<body>
+		<header class="header"></header>
+		<main class="slider" id="slider">
+			<!--<img src="Headers/1.jpg" id="image"/>-->
+			<button id="up">Up</button>
+			<button id="down">Down</button>
+			
+		</main>
+		<script>
+			const image= document.getElementById('slider');
+			const up = document.getElementById('up');
+			const down = document.getElementById('down');
+			console.log(image);
+			const arr = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"];
+			console.log(arr[0]);
+			let a = 0;
+			up.addEventListener('click',() =>
+			{
+				a++;
+				console.log(a);
+				if(a == 1)
+				{
+					image.style.backgroundImage = "url('Headers/2.jpg')";
+				}
+				else if( a == 2)
+				{
+					image.style.backgroundImage = "url('Headers/3.jpg')";
+				}
+				else if( a == 3)
+				{
+					image.style.backgroundImage = "url('Headers/4.jpg')";
+				}
+				else if( a == 4)
+				{
+					image.style.backgroundImage = "url('Headers/5.jpg')";
+				}
+				else if( a == 5)
+				{
+					image.style.backgroundImage = "url('Headers/6.jpg')";
+				}
+				else
+				{
+				}
+			});
+			down.addEventListener('click',() =>
+			{
+				a--;
+				console.log(a);
+				if(a == 1)
+				{
+					image.style.backgroundImage = "url('Headers/2.jpg')";
+				}
+				else if( a == 2)
+				{
+					image.style.backgroundImage = "url('Headers/3.jpg')";
+				}
+				else if( a == 3)
+				{
+					image.style.backgroundImage = "url('Headers/4.jpg')";
+				}
+				else if( a == 4)
+				{
+					image.style.backgroundImage = "url('Headers/5.jpg')";
+				}
+				else if( a == 5)
+				{
+					image.style.backgroundImage = "url('Headers/6.jpg')";
+				}
+				else
+				{
+				}
+			});
+		</script>
+		
+	</body>
+</html>

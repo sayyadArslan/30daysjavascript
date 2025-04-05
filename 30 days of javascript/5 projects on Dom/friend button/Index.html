@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" width="device-width initial-scale=1.0">
+		<title>Project-1</title>
+		<link rel="stylesheet" type="text/css" href="Style.css" />
+	</head>
+	<body>
+		<div class="box" id="box">
+				<img src="abc.jpeg"/>
+				<img src="favorite_36px.png" id="ico"/>
+				<center>
+				<h1>Arslan Sherazi</h1>
+				<p id="name">Male</p>
+				<Button id="btn">Add Friend</Button>
+				</center>
+		</div>
+		
+		
+		<script>
+			const friend = document.getElementById('name');
+			console.log(friend);
+			const button = document.getElementById('btn');
+			console.log(button);
+			let check = 0;
+			
+			const icon = document.getElementById('ico');
+			console.log(icon);
+			const box = document.getElementById('box');
+			console.log(box);
+			box.addEventListener('dblclick',function(){
+				icon.style.opacity= "100%";
+				icon.style.transition = '0.5s';
+				icon.style.transform = "scale(1.5)";
+			});
+			setTimeout(function()
+			{
+				icon.style.opacity= "0%";
+				//icon.style.transform = "scale(1.5)";
+			},2000);
+			button.addEventListener('click',function()
+			{
+				if(check == 0)
+				{
+					friend.innerText = "Friend";
+					friend.style.color = 'Red';
+					check = 1;
+				}
+				else
+				{
+					friend.innerText = "Male";
+					friend.style.color = 'White';
+					check = 0;
+				}
+			});
+			
+			
+		</script>
+	</body>
+</html>

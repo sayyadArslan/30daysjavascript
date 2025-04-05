@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+	<head>
+		<Title>DOcument Object Model</Title>
+	</head>
+	<body>
+		<header id="header">
+			<h1>Arslan Sherazi</h1>
+			<Button id="bt" class="arsl">Submit</Button>
+		</header>
+		<script>
+			//const btn = document.getElementById("bt").innerText = "Talha Sherazi";
+			//const btn1 = document.getElementById("bt").innerHtml = "<p>pakistan</p>";
+			//const btn1 = document.getElementById("bt").attributes;
+			const address = document.getElementById("bt").setAttribute("style","background-color:red");
+			const addr = document.getElementById("bt").removeAttribute("style");
+			//console.log(btn);
+			const add = document.getElementById("header").children[0];
+			console.log(add);
+			
+		</script>
+	</body>
+</html>

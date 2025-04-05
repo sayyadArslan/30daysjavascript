@@ -1,0 +1,11 @@
+const arr = [
+    {Id:1,name:"Arslan",marks:25},
+    {Id:2,name:"subhan",marks:30},
+    {Id:3,name:"Talha",marks:35}
+];
+/*console.log(arr[0]);
+console.log(arr[1]);*/
+arr.forEach(function(value)
+{
+    console.log(value);
+})

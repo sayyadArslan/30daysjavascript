@@ -1,0 +1,59 @@
+<!doctype html>
+	<head>
+		<title>Counter App</title>
+		<style>
+			div
+			{	
+				width:500px;
+				height:500px;
+				background-color:aqua;	
+			}
+			h1
+			{	
+				font-size:50px;
+				font-family:Arial;
+			}
+			Button
+			{
+				width:100px;
+				height:50px;
+				font-size:18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<h1 id="head">Counter</h1>
+			<Button id="plus">+</Button>
+			<Button id="minus">-</Button>
+			<Button id="reset">Reset</Button>
+		</div>
+		<script>
+			const plus = document.getElementById('plus');
+			const minus = document.getElementById('minus');
+			const reset = document.getElementById('reset');
+			const heading = document.getElementById('head');
+			console.log(heading.innerText);
+			let a = 1;
+			plus.addEventListener('click',function()
+			{
+				heading.innerText = a++;	
+				console.log(a);
+			});
+			
+			minus.addEventListener('click',function()
+			{
+				let a1 = heading.innerText;
+				console.log(a1); 
+				heading.innerText = a1-1;	
+				
+			});
+			reset.addEventListener('click',function()
+			{
+				heading.innerText = "Counter";
+				a = 0;
+				
+			});
+		</script>
+	</body>
+</html>

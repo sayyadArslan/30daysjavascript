@@ -1,0 +1,91 @@
+<!Doctype html>
+	<head>
+		<title>Todo List</title>
+		<style>
+			body
+			{
+				
+			}
+			#container
+			{
+				background-color:Aqua;
+				width:50%;
+				height:500px;
+				font-size:25px;
+				//color:Black;
+				display:flex;
+				flex-direction:column;
+				position:relative;
+				left:20%;
+			}
+			.box
+			{
+				width:50%;
+				//border:2px solid red;
+				display:flex;
+				height:60px;
+				position:relative;
+				left:20%;
+			}
+			input
+			{
+				width:500px;
+				height:50px;
+				border:2px solid crimson;
+				border-radius:30px;
+				padding-left:10px;
+				font-size:20px;
+				margin-right:30px;
+			}
+			#btn
+			{
+				width:150px;
+				height:50px;
+				border:none;
+				border-radius:30px;
+				background-color:crimson;
+				Color:white;
+				font-size:20px;
+				border:none;
+				transition:0.5s;
+				
+			}
+			#btn:hover
+			{
+				transform:scale(1.1);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		<input type="text" id="text"></input>
+		<button id="btn">Add Task</button>
+		</div>
+		<div id="container">
+			
+		</div>
+		<script>
+			console.log('I am working');
+			const btn = document.getElementById('btn');			
+			//console.log(btn);
+			btn.addEventListener('click',Add);
+			function Add()
+			{
+				const box = document.createElement('div');
+				const heading =  document.createElement('h1');
+				const text = document.getElementById('text').value;
+				const te = document.createTextNode(text);
+				//box.style.width = "500px";
+				//console.log(te);	
+				const el = heading.appendChild(te);
+				//box.style.backgroundColor = "red";
+				//console.log(ne);	
+				//el.style.Color = "red";
+				document.getElementById('container').appendChild(el);
+				document.getElementById('text').value = "";
+				
+			}
+		</script>
+		
+	</body>
+</html>
